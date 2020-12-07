@@ -12,5 +12,7 @@ public class replt_162_Methods_Fibonacci {
     public static void fib(int num){
         //WRITE YOUR CODE HERE
 
+
+
     }
 }
