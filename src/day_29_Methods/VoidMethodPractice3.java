@@ -14,7 +14,6 @@ public class VoidMethodPractice3 {
 
     public static void eligibleToVote(String citizenship, int age, boolean isAlive) {
         if (citizenship.equalsIgnoreCase("USA")) {
-
             if(isAlive){
                 if(age >= 18){
                     System.out.println("You are eligible to vote");

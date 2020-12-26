@@ -17,6 +17,7 @@ public class ArraysUtility {
         return max;
     }
 
+
 // Finds min int in array
     public static int min(int[] arr){
         int min = arr[0];

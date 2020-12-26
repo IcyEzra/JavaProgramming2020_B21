@@ -2,9 +2,18 @@ package Personal;
 
 public class quiz {
     public static void main(String[] args) {
-       String s1 = "abc";
-       String s2 = "abc";
-        System.out.println("s1 == s2 is: " + s1==s2);
+        int x = 7;
+            if(available(x)){
+                System.out.println("1");
+            }else{
+                System.out.println("2");
+            }
 
-        }
+
+
     }
+public static boolean available(int x){
+        return x > 1 ? true : false;
+}
+
+}

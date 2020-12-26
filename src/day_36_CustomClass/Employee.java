@@ -47,6 +47,20 @@ public class Employee {
 
     }
 
+
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", gender=" + gender +
+                ", SSN='" + SSN + '\'' +
+                ", ID=" + ID +
+                ", jobTitle='" + jobTitle + '\'' +
+                ", companyName='" + companyName + '\'' +
+                ", salary=" + salary +
+                ", hireDate=" + hireDate +
+                '}';
+    }
+
     public void attendMeeting(){
         System.out.println(name+" is attending the meeting");
     }

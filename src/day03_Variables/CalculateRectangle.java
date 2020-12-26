@@ -23,9 +23,9 @@ public class CalculateRectangle {
         double Pi = 3.14;
         double CircleArea = radius * radius * Pi;
         double CirclePerimeter = radius * 2 * Pi;
-        System.out.print("Circle Area ");
+        System.out.print("CirclePractice Area ");
         System.out.println(CircleArea);
-        System.out.print("Circle Perimeter ");
+        System.out.print("CirclePractice Perimeter ");
         System.out.println(CirclePerimeter);
 
 

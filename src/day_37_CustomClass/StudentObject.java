@@ -26,7 +26,7 @@ public class StudentObject {
 
         //student2.getInfo();
 
-        System.out.println( student2 ); // will print Name, gender, id, dob, and gpa
+        System.out.println( "["+student2+"]" ); // will print Name, gender, id, dob, and gpa
 
         Student student3 = new Student();
         student3.setInfo("Mary",'F',LocalDate.of(1995,9,5),"C123",2.9);
@@ -36,7 +36,21 @@ public class StudentObject {
         System.out.println("=========================================================");
 
         ArrayList<Student> studentList = new ArrayList<>( Arrays.asList( student1,student2,student3 ) );
-        System.out.println( studentList );
+        System.out.println( studentList ); // doesn't print hashcode because we have toString method in class
+
+        System.out.println("============================================================");
+
+        Student[] students = {student1,student2,student3};
+        System.out.println(Arrays.toString(students));
+
+        System.out.println("=============================================================");
+        // find specific student ID
+
+        for(Student each : students){
+            if(each.ID.equals("A01")){
+                System.out.println(each);
+            }
+        }
 
     }
 }

@@ -5,29 +5,40 @@ import java.util.Scanner;
 public class loopVowels {
     public static void main(String[] args) {
 
-        Scanner inp = new Scanner(System.in);
-        System.out.print("In:");
-        String word = inp.nextLine();
-        //write your code below
-        for(int i = 0; i < word.length(); i++){
-            if(word.contains("a")){
-                System.out.print("a");
-            }
-            if(word.contains("e")){
-                System.out.print("e");
-            }
-            if(word.contains("i")){
-                System.out.print("i");
-            }
-            if(word.contains("o")){
-                System.out.print("o");
-            }
-            if(word.contains("u")){
-                System.out.print("u");
-            }
-
-        }
-
 
     }
+
+
+    public static boolean appearsTwice(String target, String sentence) {
+        //write your codes here:
+        boolean valid = false;
+
+        int count = 0;
+        String[] split = sentence.split(" ");
+        for(String each : split){
+            if(each.equals(target)){
+                count++;
+            }
+            if(count == 2){
+                valid = true;
+            }else{
+                valid = false;
+            }
+        }
+
+        return valid;
+    }
 }
+/*
+boolean valid = true;
+    String[] split = sentence.split(" ");
+        if(sentence.contains(target)) {
+                valid = true;
+                }else{
+                valid = false;
+                }
+
+
+                return valid;
+
+ */

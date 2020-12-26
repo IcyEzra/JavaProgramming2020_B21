@@ -9,7 +9,7 @@ public class PrintVowels {
         String word = inp.nextLine();
         //write your code below
         for(int i = 0; i == word.length(); i++){
-            if(word.contains("a")){
+            if(word.contains("a") ){
 
             }
         }
