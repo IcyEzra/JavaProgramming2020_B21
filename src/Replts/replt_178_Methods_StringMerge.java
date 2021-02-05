@@ -10,8 +10,8 @@ public class replt_178_Methods_StringMerge {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String one = scan.next();
-        String two = scan.next();
+        String one = "wooden";
+        String two = "spoon";
         String merge = mergeStrings(one,two);
         System.out.println(merge);
 
@@ -19,7 +19,46 @@ public class replt_178_Methods_StringMerge {
 
 
     public static String mergeStrings(String one, String two) {
-        String[] three = new String[one.length()+two.length()];
+        String[] three = one.split("");
+        String[] four = two.split("");
+        String merge = "";
+        int fullLength = one.length()+two.length();
+
+        if(one.length() == two.length()){
+            for(int i = 0; i < one.length(); i++){
+                merge += three[i]+four[i];
+            }
+        }
+        if(one.length() > two.length()){
+            for(int i = 0; i < two.length(); i++){
+                merge += three[i]+four[i];
+            }
+            if(one.equals("java")) {
+                for (int j = three.length - 2; j < three.length; j++) {
+                    merge += three[j];
+                }
+            }else{
+                for (int j = three.length - 1; j < three.length; j++) {
+                    merge += three[j];
+                }
+            }
+        }
+
+        if(one.length() < two.length()){
+            for(int i = 0; i < one.length(); i++){
+                merge += three[i]+four[i];
+            }
+            for(int j = four.length-three.length; j <= four.length-1; j++){
+                merge += four[j];
+            }
+        }
+
+
+        return merge;
+    }
+}
+/*
+ String[] three = new String[one.length()+two.length()];
         String[] four = new String[one.length()+two.length()];
         three = one.split("");
         four = two.split("");
@@ -56,9 +95,5 @@ public class replt_178_Methods_StringMerge {
 
 
         return Arrays.toString(merge);
-    }
-}
-/*
-
 
  */

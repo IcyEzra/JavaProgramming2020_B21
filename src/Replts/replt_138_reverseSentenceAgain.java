@@ -10,16 +10,16 @@ public class replt_138_reverseSentenceAgain {
 
         String reversed = "";
         //TODO: start your code here
-        String[] words = sentence.split(" ");
-        String[] reverse = new String[words.length];
-        for(int i = 0; i <= reverse.length-1; i++){
-            reverse[i] = words[i];
-        }
+       String[] split = sentence.split(" ");
+       String word = "";
+       for(int i = split.length-1; i >= 0; i-- ){
+           word += split[i]+"  ";
+       }
+       String[] split2 = word.split(" ");
+        System.out.println(Arrays.toString(split2));
 
-        System.out.println(Arrays.toString(reverse));
-        String[] r = new String[words.length];
-        for(int j = reverse.length-1; j >= 0; j--){
-            reversed += reverse[j]+" " ;
+        for(String each : split2){
+            reversed += each+" ";
         }
 
 

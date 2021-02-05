@@ -7,26 +7,20 @@ public class Stock {
     public long marketCap;
 
 
-    public void Stock(String tickerSymbol, String companyName, int price, int totalShares) {
-        this.tickerSymbol = tickerSymbol;
+    public Stock(String tickerSymbol, String companyName, int price, int totalShares) {
+        this.tickerSymbol = tickerSymbol.toUpperCase();
         this.companyName = companyName;
         this.price = price;
         this.totalShares = totalShares;
+        marketCap = totalShares * price;
+        percentChange = 0;
     }
-
-    public void setInfo(String tickerSymbol, String companyName, int price, int totalShares) {
-        this.tickerSymbol = tickerSymbol;
-        this.companyName = companyName;
-        this.price = price;
-        this.totalShares = totalShares;
-        this.marketCap = totalShares*price;
-    }
-
 
 
     public void adjustPrice(int value){
         price = price + value;
         marketCap = totalShares*price;
+        percentChange = 0;
     }
 
     public String toString(){
