@@ -21,6 +21,8 @@ public class replt_136_ArraysHas55 {
                 valid = true;
             }else if(nums[3] == 5 && nums[4] == 5){
                 valid = true;
+            }else if(nums[1] == 5 && nums[4] == 5){
+                valid = false;
             }else{
                 valid = false;
             }

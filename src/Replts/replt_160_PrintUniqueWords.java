@@ -18,15 +18,24 @@ public class replt_160_PrintUniqueWords {
 
     public static void printUniqueWords(String[] words){
         //WRITE YOUR CODE HERE
-        String word = words[0];
         String unique = "";
-        for(int i = words.length-1; i >= 0; i++){
-           if(word.equals(words[i])){
 
-           }
+        for(int i = 0; i <= words.length-1; i++) {
+            String word = words[i];
+            int frequency = 0;
+
+            for (String each : words) {
+
+                if(each.equals(word)){
+                    frequency++;
+                }
+
+            }
+            if(frequency == 1){
+                System.out.println(word);
+            }
+
         }
-
-        System.out.println(unique);
 
     }
 }

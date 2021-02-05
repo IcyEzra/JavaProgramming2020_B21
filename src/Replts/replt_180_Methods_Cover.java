@@ -5,30 +5,33 @@ import java.util.Arrays;
 public class replt_180_Methods_Cover {
 
     public static void main(String[] args) {
-        String answer = coverString("hello hello", "ello");
+        String answer = coverString("certfied wooden spoon", "o");
         System.out.println(answer) ; //java [me]thods
 
     }
 
     public static String coverString(String main, String coverME) {
        String result = "";
-       String[] split = main.split(coverME);
-        for(int i = 0; i <= split.length-1; i++){
-            if(main.contains(coverME)){
-                result += split[i]+"["+coverME+"]";
+       String[] split = null;
+       if(main.contains(coverME)){
+           split = main.split(coverME);
+           if(main.endsWith(coverME)) {
+               for (int i = 0; i < split.length; i++) {
+                   result += split[i] + "[" + coverME + "]";
+               }
+           }else{
+               for(int i = 0; i < split.length-1; i++){
+                   result += split[i]+"["+coverME+"]";
+               }
+               result += split[split.length-1];
+           }
 
-            }else{
-                result = "["+main+"]";
-            }
-        }
-        String result2 = "";
-        if(result.endsWith("["+coverME+"]")){
-            for(int i = 0; i <= result.length()-4; i++){
-                result2 += result.charAt(i);
-            }
-        }
+       }else{
+           result = "["+main+"]";
+       }
 
-        return result2;
+
+       return result;
     }
 
 }

@@ -8,19 +8,39 @@ public class replt_MethodsWithArrays_getDup {
 
     public static void main(String[] args) {
 
-        String[] arr = {"1","2","aa","1"};
+        String[] arr = {"1","g","aa","7","7","7","2","aa","7"};
         int answer = getDup(arr);
         System.out.println("answer = " + answer);
     }
 
 
 
-    public static int getDup(String[] r){
-    int count = 0;
+    public static int getDup(String[] r) {
+
+        String duplicates = "";
+
+        for(int j = 0; j <= r.length-1; j++){
+
+            String ch = r[j];
+            int frequency = 0 ;
+
+            for(int i = 0; i <= r.length-1; i++){ // for finding the frequency of one character at a time
+                if( r[i] == ch){
+                    frequency++;
+                }
+            }
 
 
 
-    return count;
+            if(frequency > 1 ){ // if frequency is more than 1, it means the ch is duplicated
+                // && !duplicates.contains( ""+ch ) ;  // in order to contain one char
+                duplicates += ch;
+            }
+
+
+        }
+        int count = duplicates.length();
+        return count;
     }
 }
 
@@ -50,4 +70,38 @@ int count = 0;
 
     count = arr.size();
     return count;
+
+
+
+     int count = 0;
+    int totalCount = 0;
+    String check = r[0];
+
+    for(int i = 0, j = 1; i <= r.length-1; i++){
+        if(check.equals(r[i])){
+            count++;
+        }
+        if(count > 1){
+            totalCount++;
+            check = r[j];
+            count = 0;
+        }
+        do {
+            if(r[j].equals(r[i])){
+                count++;
+                if(count > 1){
+                    totalCount++;
+                    count = 0;
+                    j++;
+                }
+            }
+
+        }
+        while(j == i);
+
+    }
+
+    return totalCount;
+    }
+
  */

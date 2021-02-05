@@ -47,11 +47,5 @@ public class replt_134_ArraysInnerAndOuter {
 
 }
 /*
-outer = new int[inner.length];
-        for(int i = 0; i <= outer.length-1; i++){
-            if(outer[i] == inner[i]){
-                System.out.println(true);
-            }
 
-        }
  */

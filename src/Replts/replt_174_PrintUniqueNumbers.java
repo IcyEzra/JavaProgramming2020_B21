@@ -10,15 +10,19 @@ public class replt_174_PrintUniqueNumbers {public static void main(String[] args
 
     public static void printUniqueNumbers(int[] nums){
         //WRITE YOUR CODE HERE
-        int count = 0;
-        int check = nums[0];
-        for(int each : nums) {
-            if(each != check){
-                count++;
+        for(int i = 0; i < nums.length; i++){
 
+            int count = 0;
+            for(int each : nums){
+
+                if(each == nums[i]){
+                    count++;
+                }
+            }
+            if(count ==1){
+                System.out.println( nums[i] );
             }
 
         }
-
     }
 }
